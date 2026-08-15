@@ -1,0 +1,18 @@
+{
+  "name": "chainbridge",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The standard library for autonomous agents on Ethereum.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

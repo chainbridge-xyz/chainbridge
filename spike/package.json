@@ -1,0 +1,25 @@
+{
+  "name": "chainbridge-spike",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Validation spike — wires ERC-8004 + ERC-4337 + x402 + MCP + A2A end-to-end. Ugly on purpose. The friction log is the deliverable.",
+  "type": "module",
+  "scripts": {
+    "spike": "tsx run.ts",
+    "server": "tsx server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "permissionless": "^0.2.10",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

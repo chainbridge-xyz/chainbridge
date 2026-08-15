@@ -1,0 +1,44 @@
+{
+  "name": "@chainbridge/wallet",
+  "version": "0.1.0",
+  "description": "ERC-4337 smart account provisioning for autonomous agents — Safe v1.4.1 on Base, no permissionless dependency.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build",
+    "test": "node --test test/*.mjs"
+  },
+  "keywords": [
+    "erc-4337",
+    "account-abstraction",
+    "safe",
+    "smart-account",
+    "agents",
+    "ethereum",
+    "base"
+  ],
+  "peerDependencies": {
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "viem": "^2.21.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

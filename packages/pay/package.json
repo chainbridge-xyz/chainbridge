@@ -1,0 +1,48 @@
+{
+  "name": "@chainbridge/pay",
+  "version": "0.1.0",
+  "description": "x402 payments for autonomous agents — a tight wrapper over fetch + EIP-3009 signing.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build",
+    "test": "node --test test/*.mjs"
+  },
+  "keywords": [
+    "x402",
+    "eip-3009",
+    "usdc",
+    "agents",
+    "payments",
+    "ethereum",
+    "base"
+  ],
+  "peerDependencies": {
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "viem": "^2.21.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
